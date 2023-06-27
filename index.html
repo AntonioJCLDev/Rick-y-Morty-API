@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>👽 RICK Y MORTY 👽</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 id="title">RICK AND MORTY API</h1>
-        <input id="searchbar" onkeyup="searchCharacter()" type="search"
-        name="search" placeholder="Busca tu personaje...">
+      <h1 id="title">RICK AND MORTY API</h1>
+      <input
+        id="searchbar"
+        onkeyup="searchCharacter()"
+        type="search"
+        name="search"
+        placeholder="Busca tu personaje..."
+      />
     </header>
-    
-    <main id="estructura">
-    </main>
+
+    <main id="estructura"></main>
 
     <div class="pag-buttons">
-        <button id="atras">Página anterior</button>
-        <span id="info-pag"></span>
-        <button id="siguiente">Página siguiente</button>
+      <button id="atras" onclick="showPrevPage()">Página anterior</button>
+      <span id="info-pag"></span>
+      <button id="siguiente" onclick="showNextPage()">Página siguiente</button>
     </div>
 
     <footer>
-        <p>This website is my first web development project</p>
+      <p>This website is my first web development project</p>
     </footer>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
