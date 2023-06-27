@@ -33,33 +33,3 @@ getCharacters(data => {
         main.append(article);
     });
 });
-
-function getPages(){
-    console.log("Paco")
-    const info = url
-
-    info
-        .then(res => res.json())
-        .then(data => {
-            done(data)
-        });
-    
-    data.info.next
-}
-
-
-//Barra de busqueda fallida
-/* function searchCharacter() {
-    let input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    let article = document.getElementsByClassName('article');
-      
-    for (i = 0; i < article.length; i++) { 
-        if (article[i].innerHTML.toLowerCase().includes(input)) {
-            article[i].style.display="none";
-        }
-        else {
-            article[i].style.display = article;                 
-        }
-    }
-} */
