@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    background: rgb(0,22,101);
+    background: radial-gradient(circle, rgba(0,22,101,1) 46%, rgba(1,1,43,1) 77%, rgba(0,0,0,1) 100%);
+}
+
+header {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article:hover{
+    scale: 105%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#searchbar {
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+    background-color: white;
+    background-size: 24px;
+    width: 400px;
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 10px 10px 30px;
+    outline: none;
+    border-radius: 20px 20px 20px 20px;
+  }
+
+h1, h2, p {
+    text-align: center;
+    color: white;
+}
+
+.span-status {
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+    padding: 2%;
+
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    width: 100%;
+}
+article {
+    padding: 10px;
+    box-shadow: 0px 0px 2px #fff;
+}
+
+.pag-buttons {
+    display:flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+    
+}
