@@ -8,7 +8,7 @@ let currentPage = 1;
 
 function getAllCharacters(currentPage) {
 	const page = "?page=" + currentPage
-    fetch("https://rickandmortyapi.com/api/character" + page)
+    fetch(`https://rickandmortyapi.com/api/character${page}`)
 		.then(res => res.json())
 		.then(data => render(data))
 }
