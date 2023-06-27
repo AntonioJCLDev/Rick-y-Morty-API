@@ -1,5 +1,46 @@
 const url = fetch("https://rickandmortyapi.com/api/character");
-const search = document.getElementById("searchbar")
+const search = document.getElementById("searchbar");
+const estructura = document.querySelector("#estructura");
+const botonAtrasDOM = document.querySelector("#atras");
+const infoPagDOM = document.querySelector("#info-pag");
+const botonSiguiente = document.querySelector("#siguiente");
+const elementosPorPagina = 20
+let paginaActual = 1;
+const baseDeDatos = url;
+
+function avanzarPagina() {
+    paginaActual = paginaActual + 1;
+    renderizar();
+}
+
+function retrocederPagina() {
+    paginaActual = paginaActual - 1;
+    renderizar();
+}
+
+function obtenerRebanadaDeBaseDeDatos(pagina = 1) {
+	const corteDeInicio = (paginaActual - 1) * elementosPorPagina;
+	const corteDeFinal = corteDeInicio + elementosPorPagina;
+	return baseDeDatos.slice(corteDeInicio, corteDeFinal);
+}
+
+function obtenerPaginasTotales() {
+    console.log(baseDeDatos.then(response => response.json()))
+    console.log(baseDeDatos.then(response => response.json()).length)
+	return Math.ceil(baseDeDatos.then(response => response.json()).length / elementosPorPagina);
+}
+
+function gestionarBotones() {
+    if (paginaActual === 1) {
+        botonAtrasDOM.setAttribute("disabled", true);
+    } else{
+        botonAtrasDOM.removeAttribute("disabled");
+    }
+
+
+
+
+}
 
 
 
@@ -33,3 +74,6 @@ getCharacters(data => {
         main.append(article);
     });
 });
+
+
+botonAtrasDOM.addEventListener("click", obtenerPaginasTotales())
