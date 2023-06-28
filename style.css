@@ -23,7 +23,7 @@ header {
 
 .article:hover{
     scale: 105%;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in;
     cursor: pointer;
 }
 
@@ -43,6 +43,13 @@ h1, h2, p {
     text-align: center;
     color: white;
 }
+
+#title:hover {
+    cursor: pointer;
+    scale: 105%;
+    transition: 0.3s ease-in
+}
+
 
 .span-status {
     color: white;

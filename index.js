@@ -1,62 +1,36 @@
-const url = fetch("https://rickandmortyapi.com/api/character");
 const search = document.getElementById("searchbar");
 const estructura = document.querySelector("#estructura");
-const botonAtrasDOM = document.querySelector("#atras");
+const prevPageButton = document.querySelector("#atras");
 const infoPagDOM = document.querySelector("#info-pag");
-const botonSiguiente = document.querySelector("#siguiente");
-const elementosPorPagina = 20
-let paginaActual = 1;
-const baseDeDatos = url;
+const nextPageButton = document.querySelector("#siguiente");
+const elsByPage = 20
+let currentPage = 0;
 
-function avanzarPagina() {
-    paginaActual = paginaActual + 1;
-    renderizar();
-}
-
-function retrocederPagina() {
-    paginaActual = paginaActual - 1;
-    renderizar();
-}
-
-function obtenerRebanadaDeBaseDeDatos(pagina = 1) {
-	const corteDeInicio = (paginaActual - 1) * elementosPorPagina;
-	const corteDeFinal = corteDeInicio + elementosPorPagina;
-	return baseDeDatos.slice(corteDeInicio, corteDeFinal);
-}
-
-function obtenerPaginasTotales() {
-    console.log(baseDeDatos.then(response => response.json()))
-    console.log(baseDeDatos.then(response => response.json()).length)
-	return Math.ceil(baseDeDatos.then(response => response.json()).length / elementosPorPagina);
-}
-
-function gestionarBotones() {
-    if (paginaActual === 1) {
-        botonAtrasDOM.setAttribute("disabled", true);
-    } else{
-        botonAtrasDOM.removeAttribute("disabled");
-    }
-
-
-
-
-}
-
-
-
-function getCharacters(done){
-
-    const results = url
-
-    results
+function getAllCharacters(currentPage) {
+    const page = "?page=" + currentPage
+    fetch("https://rickandmortyapi.com/api/character" + page)
         .then(res => res.json())
-        .then(data => {
-            done(data)
-        });
+        .then(data => render(data))
 }
 
-getCharacters(data => {
-    
+function showNextPage() {
+    currentPage += 1;
+    getAllCharacters(currentPage);
+}
+
+function showPrevPage() {
+    if (currentPage > 1) {
+        currentPage -= 1;
+        getAllCharacters(currentPage);
+    }
+}
+
+function refreshPage(){
+    location.reload();
+}
+
+function render(data) {
+    document.querySelector("#estructura").innerHTML = ""
     data.results.forEach((personaje) => {
         
         const article = document.createRange().createContextualFragment(`
@@ -73,7 +47,6 @@ getCharacters(data => {
 
         main.append(article);
     });
-});
+}
 
-
-botonAtrasDOM.addEventListener("click", obtenerPaginasTotales())
+getAllCharacters(currentPage)
