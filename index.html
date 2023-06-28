@@ -13,18 +13,25 @@
         <input id="searchbar" onkeyup="searchCharacter()" type="search"
         name="search" placeholder="Busca tu personaje...">
     </header>
+
+    <div class="pag-buttons">
+        <button id="atras" onclick="showPrevPage()">Prev. page</button>
+        <span id="info-pag"></span>
+        <button id="siguiente" onclick="showNextPage()">Next page</button>
+    </div>
     
     <main id="estructura">
     </main>
 
     <div class="pag-buttons">
-        <button id="atras" onclick="showPrevPage()">Página anterior</button>
+        <button id="atras" onclick="showPrevPage()">Prev. page</button>
         <span id="info-pag"></span>
-        <button id="siguiente" onclick="showNextPage()">Página siguiente</button>
+        <button id="siguiente" onclick="showNextPage()">Next page</button>
     </div>
 
     <footer>
         <p>This website is my first web development project</p>
+        <!-- <img src="gh-icon.png" alt=""> -->
     </footer>
     <script src="index.js"></script>
 </body>

@@ -4,7 +4,7 @@ const prevPageButton = document.querySelector("#atras");
 const infoPagDOM = document.querySelector("#info-pag");
 const nextPageButton = document.querySelector("#siguiente");
 const elsByPage = 20
-let currentPage = 0;
+let currentPage = 1;
 
 function getAllCharacters(currentPage) {
     const page = "?page=" + currentPage
