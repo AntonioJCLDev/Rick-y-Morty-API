@@ -9,14 +9,14 @@
 </head>
 <body>
     <header>
-        <h1 id="title" onclick="refreshPage()">RICK AND MORTY API</h1>
+        <img src="Logo-banner.webp" alt="Logo-banner" onclick="refreshPage()">
         <input id="searchbar" onkeyup="searchCharacter()" type="search"
         name="search" placeholder="Busca tu personaje...">
     </header>
 
     <div class="pag-buttons">
         <button id="atras" onclick="showPrevPage()">Prev. page</button>
-        <span id="info-pag"></span>
+        <span id="info-pag-up"></span>
         <button id="siguiente" onclick="showNextPage()">Next page</button>
     </div>
     
@@ -25,13 +25,17 @@
 
     <div class="pag-buttons">
         <button id="atras" onclick="showPrevPage()">Prev. page</button>
-        <span id="info-pag"></span>
+        <span id="info-pag-down"></span>
         <button id="siguiente" onclick="showNextPage()">Next page</button>
     </div>
 
     <footer>
         <p>This website is my first web development project</p>
-        <!-- <img src="gh-icon.png" alt=""> -->
+        <div class="footer-buttons">
+            <button id="gh-icon" onclick="window.open('https://github.com/AntonioJCLDev/Rick-y-Morty-API')"><img src="gh-icon.webp" alt=""></button>
+            <button id="li-icon" onclick="window.open('https://www.linkedin.com/in/antonio-jes%C3%BAs-cabrera-l%C3%B3pez-7677a927b/')"><img src="li-icon.webp" alt=""></button>
+        </div>
+        
     </footer>
     <script src="index.js"></script>
 </body>

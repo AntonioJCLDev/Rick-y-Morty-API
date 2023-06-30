@@ -1,10 +1,17 @@
 const search = document.getElementById("searchbar");
 const estructura = document.querySelector("#estructura");
 const prevPageButton = document.querySelector("#atras");
-const infoPagDOM = document.querySelector("#info-pag");
+const infoPagDOM = document.querySelector("#info-pag-up");
+const infoPagDOM2 = document.querySelector("#info-pag-down");
 const nextPageButton = document.querySelector("#siguiente");
 const elsByPage = 20
 let currentPage = 1;
+
+function pageNumber (currentPage) {
+    infoPagDOM.innerHTML = currentPage
+    infoPagDOM2.innerHTML = currentPage
+
+}
 
 function getAllCharacters(currentPage) {
     const page = "?page=" + currentPage
@@ -14,8 +21,10 @@ function getAllCharacters(currentPage) {
 }
 
 function showNextPage() {
-    currentPage += 1;
-    getAllCharacters(currentPage);
+    if(currentPage < 42) {
+        currentPage += 1;
+        getAllCharacters(currentPage);
+    }
 }
 
 function showPrevPage() {
@@ -47,6 +56,8 @@ function render(data) {
 
         main.append(article);
     });
+
+    pageNumber(currentPage)
 }
 
 getAllCharacters(currentPage)
