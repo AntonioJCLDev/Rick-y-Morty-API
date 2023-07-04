@@ -59,4 +59,8 @@ function render(data) {
     pageNumber(currentPage)
 }
 
+function infoCharacter() {
+    
+}
+
 getAllCharacters(currentPage)
