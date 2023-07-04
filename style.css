@@ -172,19 +172,6 @@ footer {
   width: 40px;
 }
 
-#searchbar {
-  background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png)
-    no-repeat 0px 5px;
-  background-color: white;
-  background-size: 24px;
-  width: 400px;
-  border: transparent;
-  border-bottom: solid 1px #ccc;
-  padding: 10px 10px 10px 30px;
-  outline: none;
-  border-radius: 20px 20px 20px 20px;
-}
-
 #info-pag-down,
 #info-pag-up {
   font-family: "Roboto", sans-serif;

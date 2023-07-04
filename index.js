@@ -1,4 +1,3 @@
-const search = document.getElementById("searchbar");
 const estructura = document.querySelector("#estructura");
 const prevPageButton = document.querySelector("#atras");
 const infoPagDOM = document.querySelector("#info-pag-up");
