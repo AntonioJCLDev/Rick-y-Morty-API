@@ -42,9 +42,9 @@ function render(data) {
     data.results.forEach((personaje) => {
         
         const article = document.createRange().createContextualFragment(`
-        <article class = "article">
-            <div class="image-container">
-                <img src="${personaje.image}" alt="personaje">
+        <article class = "article p-0.5 shadow-sm shadow-white hover:scale-105 hover:ease-in duration-200 cursor-pointer">
+            <div class="image-container flex">
+                <img class="w-full" src="${personaje.image}" alt="personaje">
             </div>
             <h2 id = "name">${personaje.name}</h2>
             <p><span class="span-status">${personaje.status}</span></p>

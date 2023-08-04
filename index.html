@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👽 RICK Y MORTY 👽</title>
 </head>
-<body>
-    <header>
-        <img src="images/Logo-banner.webp" alt="Logo-banner" onclick="refreshPage()">
+<body class="font-body bg-gradient-to-b from-indigo-950 to-black m-0 p-0 box-border text-white text-center">
+    <header class="flex text-center items-center justify-around">
+        <img class="w-1/3 cursor-pointer @apply clip-banner hover:scale-105 hover:ease-in duration-200" src="images/Logo-banner.webp" alt="Logo-banner" onclick="refreshPage()">
     </header>
 
-    <div class="pag-buttons">
-        <button id="atras" onclick="showPrevPage()">Prev. page</button>
-        <span id="info-pag-up"></span>
-        <button id="siguiente" onclick="showNextPage()">Next page</button>
+    <div class="pag-buttons flex justify-center gap-14 p-10">
+        <button class="btns" id="atras" onclick="showPrevPage()">Prev. page</button>
+        <span class="font-roboto flex items-center" id="info-pag-up"></span>
+        <button class="btns" id="siguiente" onclick="showNextPage()">Next page</button>
     </div>
     
-    <main id="estructura">
+    <main class="grid grid-cols-4 gap-4 p-0.5 mx-5" id="estructura">
     </main>
 
-    <div class="pag-buttons">
-        <button id="atras" onclick="showPrevPage()">Prev. page</button>
-        <span id="info-pag-down"></span>
-        <button id="siguiente" onclick="showNextPage()">Next page</button>
+    <div class="pag-buttons flex justify-center gap-14 pt-10">
+        <button class="btns" id="atras" onclick="showPrevPage()">Prev. page</button>
+        <span class="font-roboto flex items-center" id="info-pag-down"></span>
+        <button class="btns" id="siguiente" onclick="showNextPage()">Next page</button>
     </div>
 
-    <footer>
+    <footer class="font-body flex flex-col justify-center p-10">
         <p>This website is my first web development project</p>
-        <div class="footer-buttons">
-            <button id="gh-icon" onclick="window.open('https://github.com/AntonioJCLDev/Rick-y-Morty-API')"><img src="images/gh-icon.webp" alt=""></button>
-            <button id="li-icon" onclick="window.open('https://www.linkedin.com/in/antonio-jes%C3%BAs-cabrera-l%C3%B3pez-7677a927b/')"><img src="images/li-icon.webp" alt=""></button>
+        <h2 class="pt-2"><strong>CONTACT</strong></h2>
+        <div class="footer-buttons mt-2 flex justify-center items-center">
+            <button class="m-0.5 p-2 hover:scale-110 hover:ease-in duration-200" id="gh-icon" onclick="window.open('https://github.com/AntonioJCLDev/Rick-y-Morty-API')"><img class="w-12" src="images/gh-icon.webp" alt=""></button>
+            <button class="m-0.5 p-2 hover:scale-110 hover:ease-in duration-200" id="li-icon" onclick="window.open('https://www.linkedin.com/in/antonio-jes%C3%BAs-cabrera-l%C3%B3pez-7677a927b/')"><img class="w-12" src="images/li-icon.webp" alt=""></button>
         </div>
         
     </footer>
