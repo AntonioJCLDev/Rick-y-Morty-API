@@ -11,5 +11,11 @@ module.exports = {
     },
   },
   plugins: [],
-}
+
+  components:{
+    modal:{
+      base: "hidden",
+    },
+  },
+};
 

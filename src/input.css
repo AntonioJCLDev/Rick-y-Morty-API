@@ -6,6 +6,14 @@
 
 @layer utilities {
 
+    .body-modal-open {
+        pointer-events: none;
+    }
+
+    .modal-open {
+        pointer-events: auto;
+    }
+
     .clip-banner {
  
         clip-path: polygon(
