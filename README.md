@@ -1,3 +1,3 @@
 # RICK Y MORTY API
 
-### Este proyecto tiene como objetivo ser mi primera web y familiarizarme con el uso de APIs. En este caso he creado una Wiki sencilla donde encontrarás a los más de 800 personajes de la famosa serie de televisión de Adult Swim "Rick & Morty", en la que podrás ver cierta información sobre el personaje seleccionado.
+### This project aims to be my first website and familiarize myself with the use of APIs. In this case, I have created a simple Wiki where you will find over 800 characters from the popular Adult Swim TV series "Rick & Morty," where you can find some information about the selected character.
